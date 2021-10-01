@@ -7,55 +7,59 @@
     <title>Document</title>
     <style>
         div{
-    padding-left: 40%;
-    padding-top: 220px;
-    font-size: 50px;
-    color: firebrick;
-}
+            text-align: center;
+            padding-top: 100px;
+            font-size: larger;
+            color: red;
+        }
     </style>
 </head>
 <body>
-    <script>
-        var t = document.createElement("div");
-t.setAttribute("class","timer");
-document.body.append(t);
-setTimeout(()=>{
-    t.innerHTML="10";
+    <div id="di"></div>
+    <script >
     
-},1000);
-setTimeout(()=>{
-    t.innerHTML="9";
-    
-},2000);
-setTimeout(()=>{
-    t.innerHTML="8";
-},3000);
-setTimeout(()=>{
-    t.innerHTML="7";
-},4000);
-setTimeout(()=>{
-    t.innerHTML="6";
-},5000);
-setTimeout(()=>{
-    t.innerHTML="5";
-},6000);
-setTimeout(()=>{
-    t.innerHTML="4";
-},7000);
-setTimeout(()=>{
-    t.innerHTML="3";
-},8000);
-setTimeout(()=>{
-    t.innerHTML="2";
-},9000);
-setTimeout(()=>{
-    t.innerHTML="1";
-},10000);
-setTimeout(()=>{
-    t.innerHTML="happy independence day";
-},11000);
+function count(number){
+let div = document.getElementById("di");
+div.innerHTML ="10";   
+ number();
+}
 
+function c2(){
+    let div = document.getElementById("di");
 
+    setTimeout(()=>{
+        div.innerHTML ="9";
+        setTimeout(()=>{
+            div.innerHTML="8";
+            setTimeout(()=>{
+                div.innerHTML="7";
+                setTimeout(()=>{
+                    div.innerHTML="6";
+                    setTimeout(()=>{
+                        div.innerHTML="5";
+                        setTimeout(()=>{
+                            div.innerHTML="4";
+                            setTimeout(()=>{
+                                div.innerHTML="3";
+                                setTimeout(()=>{
+                                    div.innerHTML="2";
+                                    setTimeout(()=>{
+                                        div.innerHTML="1";
+                                        setTimeout(()=>{
+                                            div.innerHTML="happy independence day";
+                                        },1000);
+                                    },1000);
+                                },1000);
+                            },1000);
+                        },1000);
+                    },1000);
+                },1000);
+            },1000);
+        },1000);
+    },1000);
+}
+
+count(c2);
     </script>
 </body>
 </html>
